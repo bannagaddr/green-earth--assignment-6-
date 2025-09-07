@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green-Earth</title>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css row file connected -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- tailwind css cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- header section -->
+    <header class="bg-[#15803D]">
+      <div class="navbar shadow-sm w-full">
+        <div
+          class="mx-auto flex items-center justify-between w-full px-4 lg:px-10"
+        >
+          <!-- Left menu + dropdown -->
+          <div class="flex">
+            <div class="dropdown dropdown-start">
+              <button tabindex="0" class="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block h-5 w-5 stroke-current text-[white]"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40"
+              >
+                <li><a>About</a></li>
+                <li><a>Gallery</a></li>
+                <li><a>Plant a Tree</a></li>
+              </ul>
+            </div>
+
+            <!-- Brand -->
+            <div class="flex items-center gap-4">
+              <img src="assets/logo.png" alt="" class="w-5" />
+              <a class="text-xs text-white">Green Earth</a>
+            </div>
+          </div>
+
+          <!-- Navbar center items -->
+          <div class="hidden lg:block">
+            <ul class="px-1 flex gap-4">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Plant a Tree</a></li>
+            </ul>
+          </div>
+
+          <!-- Right side button -->
+          <div>
+            <button
+              class="btn btn-xs !bg-[#FACC15] sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl !border-none !shadow-none !text-[#15803D]"
+            >
+              Plant a Tree
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--  -->
+  </body>
+</html>
