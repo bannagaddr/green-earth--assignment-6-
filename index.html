@@ -143,134 +143,176 @@
     </section>
 
     <!-- left categories menu, center card, right your cart section-->
-    <section
-      class="px-4 lg:px-10 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 bg-[#F0FDF4]"
-    >
-      <!-- Left Sidebar -->
-      <aside class="p-4 rounded-lg mt-10 lg:mt-20">
-        <h2 class="font-bold">Categories</h2>
-        <p>All Trees</p>
-      </aside>
+    <section class="bg-[#F0FDF4] flex flex-col items-center">
+      <div class="mt-10 lg:mt-20">
+        <h1 class="text-2xl font-semibold">About the Campaign</h1>
+      </div>
 
-      <!-- Middle Cards (auto expand to 2 columns space) -->
-      <main
-        class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 lg:mt-20"
-      >
-        <!-- card items -->
-        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-          <h3 class="font-semibold">Mango Tree</h3>
-          <p class="text-xs text-gray-600">
-            A fast-growing tropical tree that produces delicious mangoes.
-          </p>
-
-          <div class="flex justify-between">
-            <button
-              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
+      <!-- left categories menu, center card, right your cart section container-->
+      <div class="px-4 lg:px-10 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <!-- Left Sidebar -->
+        <aside class="rounded-lg mt-10">
+          <h2 class="font-bold">Categories</h2>
+          <!-- categories items container-->
+          <div class="mt-2">
+            <!-- categories items -->
+            <p
+              class="text-base hover:bg-[#15803D] px-3 py-1 rounded-md hover:text-white transition transform active:scale-95 cursor-pointer"
             >
-              Fruit Tree
-            </button>
-            <button class="text-base font-semibold">
-              <span class="text-xs">৳</span>500
-            </button>
+              All Trees
+            </p>
           </div>
-          <button
-            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-          >
-            Add to Cart
-          </button>
-        </div>
+        </aside>
 
-        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-          <h3 class="font-semibold">Mango Tree</h3>
-          <p class="text-xs text-gray-600">
-            A fast-growing tropical tree that produces delicious mangoes.
-          </p>
+        <!-- Middle Cards (auto expand to 2 columns space) -->
+        <main
+          class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10"
+        >
+          <!-- card items -->
+          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+            <h3 class="font-semibold">Mango Tree</h3>
+            <p class="text-xs text-gray-600">
+              A fast-growing tropical tree that produces delicious mangoes.
+            </p>
 
-          <div class="flex justify-between">
-            <button
-              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
-            >
-              Fruit Tree
-            </button>
-            <button class="text-base font-semibold">
-              <span class="text-xs">৳</span>500
-            </button>
-          </div>
-          <button
-            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-          >
-            Add to Cart
-          </button>
-        </div>
-
-        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-          <h3 class="font-semibold">Mango Tree</h3>
-          <p class="text-xs text-gray-600">
-            A fast-growing tropical tree that produces delicious mangoes.
-          </p>
-
-          <div class="flex justify-between">
-            <button
-              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
-            >
-              Fruit Tree
-            </button>
-            <button class="text-base font-semibold">
-              <span class="text-xs">৳</span>500
-            </button>
-          </div>
-          <button
-            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-          >
-            Add to Cart
-          </button>
-        </div>
-      </main>
-
-      <!-- Right Sidebar (Cart) -->
-      <aside class="bg-white p-4 rounded-lg mt-10 lg:mt-20">
-        <div class="flex flex-col gap-3">
-          <h1 class="text-base font-bold">Your Cart</h1>
-          <div
-            class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
-          >
-            <div class="flex flex-col gap-1">
-              <h2 class="text-sm font-medium">Mango Tree</h2>
-              <h3 class="text-base text-[#889396]">
-                <span class="text-xs">৳</span>500
-                <span
-                  ><i
-                    class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
-                  ></i
-                ></span>
-                <span>1</span>
-              </h3>
-            </div>
-            <div>
+            <div class="flex justify-between">
               <button
-                class="transition transform active:scale-95 cursor-pointer"
+                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
               >
-                <i
-                  class="fa-solid fa-xmark text-[#889396] flex justify-center"
-                ></i>
+                Fruit Tree
+              </button>
+              <button class="text-base font-semibold">
+                <span class="text-xs">৳</span>500
               </button>
             </div>
+            <button
+              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+            >
+              Add to Cart
+            </button>
           </div>
 
-          <div class="flex flex-col gap-2">
-            <div class="w-full h-0.5 bg-[#1F293715]"></div>
-            <div class="flex items-center justify-between">
-              <h3 class="text-base font-semibold">Total:</h3>
-              <span class="text-base font-semibold">
-                <span class="text-xs">৳</span>1000
-              </span>
+          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+            <h3 class="font-semibold">Mango Tree</h3>
+            <p class="text-xs text-gray-600">
+              A fast-growing tropical tree that produces delicious mangoes.
+            </p>
+
+            <div class="flex justify-between">
+              <button
+                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
+              >
+                Fruit Tree
+              </button>
+              <button class="text-base font-semibold">
+                <span class="text-xs">৳</span>500
+              </button>
+            </div>
+            <button
+              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+            >
+              Add to Cart
+            </button>
+          </div>
+
+          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+            <h3 class="font-semibold">Mango Tree</h3>
+            <p class="text-xs text-gray-600">
+              A fast-growing tropical tree that produces delicious mangoes.
+            </p>
+
+            <div class="flex justify-between">
+              <button
+                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
+              >
+                Fruit Tree
+              </button>
+              <button class="text-base font-semibold">
+                <span class="text-xs">৳</span>500
+              </button>
+            </div>
+            <button
+              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </main>
+
+        <!-- Right Sidebar (Cart) -->
+        <aside class="bg-white p-4 rounded-lg mt-10">
+          <div class="flex flex-col gap-3">
+            <h1 class="text-base font-bold">Your Cart</h1>
+            <!-- cart items -->
+            <!-- item-1 -->
+            <div
+              class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
+            >
+              <div class="flex flex-col gap-1">
+                <h2 class="text-sm font-medium">Mango Tree</h2>
+                <h3 class="text-base text-[#889396]">
+                  <span class="text-xs">৳</span>500
+                  <span
+                    ><i
+                      class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
+                    ></i
+                  ></span>
+                  <span>1</span>
+                </h3>
+              </div>
+              <div>
+                <button
+                  class="transition transform active:scale-95 cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-xmark text-[#889396] flex justify-center"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <!-- item-2 -->
+            <div
+              class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
+            >
+              <div class="flex flex-col gap-1">
+                <h2 class="text-sm font-medium">Mango Tree</h2>
+                <h3 class="text-base text-[#889396]">
+                  <span class="text-xs">৳</span>500
+                  <span
+                    ><i
+                      class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
+                    ></i
+                  ></span>
+                  <span>1</span>
+                </h3>
+              </div>
+              <div>
+                <button
+                  class="transition transform active:scale-95 cursor-pointer"
+                >
+                  <i
+                    class="fa-solid fa-xmark text-[#889396] flex justify-center"
+                  ></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- calculation result section -->
+            <div class="flex flex-col gap-2">
+              <div class="w-full h-0.5 bg-[#1F293715]"></div>
+              <div class="flex items-center justify-between">
+                <h3 class="text-base font-semibold">Total:</h3>
+                <span class="text-base font-semibold">
+                  <span class="text-xs">৳</span>1000
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </section>
 
     <!-- about the campaign -->
@@ -317,19 +359,19 @@
         <div
           class="px-15 py-5 lg:px-25 lg:py-10 bg-white rounded-lg flex flex-col items-center w-full"
         >
-          <h1 class="text-base font-semibold">500K+</h1>
+          <h1 class="text-lg text-[#15803D] font-semibold">500K+</h1>
           <span class="text-sm text-[#1F293780]">Trees Planted</span>
         </div>
         <div
           class="px-15 py-5 lg:px-25 lg:py-10 bg-white rounded-lg flex flex-col items-center w-full"
         >
-          <h1 class="text-base font-semibold">120+</h1>
+          <h1 class="text-lg text-[#15803D] font-semibold">120+</h1>
           <span class="text-sm text-[#1F293780]">Communities Involved</span>
         </div>
         <div
           class="px-15 py-5 lg:px-25 lg:py-10 bg-white rounded-lg flex flex-col items-center w-full"
         >
-          <h1 class="text-base font-semibold">30+</h1>
+          <h1 class="text-lg text-[#15803D] font-semibold">30+</h1>
           <span class="text-sm text-[#1F293780]">Countries Reached</span>
         </div>
       </div>
