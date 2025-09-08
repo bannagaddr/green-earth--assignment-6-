@@ -31,8 +31,62 @@
       class="flex items-center justify-between px-4 lg:px-15 h-15 lg:h-20 mx-auto bg-[#15803D]"
     >
       <div class="flex items-center">
-        <img src="assets/logo.png" alt="" class="w-7 lg:w-10" />
-        <h2 class="text-sm lg:text-xl font-medium text-white">Green Earth</h2>
+        <!-- navbar dropdown button and subitem -->
+        <div class="flex items-center lg:hidden">
+          <div class="relative">
+            <!-- Icon button -->
+            <button
+              id="navMenuBtn"
+              class="text-white transition transform active:scale-95 cursor-pointer"
+            >
+              <!-- Menu Icon -->
+              <i class="fa-solid fa-bars text-base lg:text-lg"></i>
+            </button>
+
+            <!-- Dropdown Menu -->
+            <ul
+              id="navMenuDropdown"
+              class="hidden absolute left-0 mt-5 w-30 bg-white rounded-lg shadow-lg"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                >
+                  Gallery
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                >
+                  Plant a Tree
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- menu bar logo and title-->
+        <div>
+          <img src="assets/logo.png" alt="" class="w-7 lg:w-10" />
+        </div>
+        <div>
+          <h2
+            class="text-sm lg:text-xl font-medium text-white whitespace-nowrap"
+          >
+            Green Earth
+          </h2>
+        </div>
       </div>
       <div class="lg:flex lg:gap-5 hidden lg:block">
         <a
@@ -89,95 +143,134 @@
     </section>
 
     <!-- left categories menu, center card, right your cart section-->
-    <section class="bg-[#F0FDF4] flex flex-col items-center">
-      <h1 class="text-2xl font-semibold mt-10 lg:mt-20">Choose Your Trees</h1>
-      <div
-        class="px-4 lg:px-15 mx-auto grid lg:grid-cols-3 grid-cols-1 gap-3 lg:gap-10"
-      >
-        <!-- left categories menu -->
-        <div class="mt-5 lg:10">
-          <h1 class="text-lg font-medium">Categories</h1>
-          <div class="flex flex-col">
-            <span
-              class="text-base font-normal hover:bg-[#15803D] px-2 py-1 hover:rounded-md hover:text-white hover:cursor-pointer"
-              >All Trees</span
-            >
-          </div>
-        </div>
+    <section
+      class="px-4 lg:px-10 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 bg-[#F0FDF4]"
+    >
+      <!-- Left Sidebar -->
+      <aside class="p-4 rounded-lg mt-10 lg:mt-20">
+        <h2 class="font-bold">Categories</h2>
+        <p>All Trees</p>
+      </aside>
 
-        <!-- center card items -->
-        <div class="mt-5 lg:mt-10">
-          <!-- cards -->
-          <div class="p-4 bg-white rounded-lg flex flex-col gap-5">
-            <div class="bg-[#EDEDED] rounded-lg">
-              <!-- card image -->
-              <img src="assets/half-moon.jpg" alt="" class="rounded-lg" />
-            </div>
-            <div class="flex flex-col gap-3">
-              <h3>Mango Tree</h3>
-              <p>
-                A fast-growing tropical tree that produces delicious, juicy
-                mangoes during summer. Its dense green
-              </p>
-            </div>
-            <div class="flex justify-between">
-              <button
-                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-base transition transform active:scale-95 cursor-pointer"
-              >
-                Fruit Tree
-              </button>
-              <button class="text-base font-semibold">
-                <span class="text-xs">৳</span>500
-              </button>
-            </div>
+      <!-- Middle Cards (auto expand to 2 columns space) -->
+      <main
+        class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10 lg:mt-20"
+      >
+        <!-- card items -->
+        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+          <h3 class="font-semibold">Mango Tree</h3>
+          <p class="text-xs text-gray-600">
+            A fast-growing tropical tree that produces delicious mangoes.
+          </p>
+
+          <div class="flex justify-between">
             <button
-              class="bg-[#15803D] text-[white] rounded-3xl px-2 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer"
+              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
             >
-              Add to Cart
+              Fruit Tree
+            </button>
+            <button class="text-base font-semibold">
+              <span class="text-xs">৳</span>500
             </button>
           </div>
+          <button
+            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+          >
+            Add to Cart
+          </button>
         </div>
 
-        <!-- your cart calculating section -->
-        <div class="mt-5 lg:mt-10 bg-white p-4 rounded-lg">
-          <div class="flex flex-col gap-3">
-            <h1 class="text-lg font-bold">Your Cart</h1>
-            <div
-              class="bg-[#F0FDF4] flex items-center justify-between rounded-lg p-3"
+        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+          <h3 class="font-semibold">Mango Tree</h3>
+          <p class="text-xs text-gray-600">
+            A fast-growing tropical tree that produces delicious mangoes.
+          </p>
+
+          <div class="flex justify-between">
+            <button
+              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
             >
-              <div class="flex flex-col gap-1">
-                <h2 class="text-sm font-medium">Mango Tree</h2>
-                <h3 class="text-base text-[#889396]">
-                  <span class="text-xs">৳</span>500
-                  <span
-                    ><i
-                      class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
-                    ></i
-                  ></span>
-                  <span>1</span>
-                </h3>
-              </div>
-              <div>
-                <button
-                  class="transition transform active:scale-95 cursor-pointer"
-                >
-                  <i
-                    class="fa-solid fa-xmark text-[#889396] flex justify-center"
-                  ></i>
-                </button>
-              </div>
-            </div>
-            <!-- your cart bottom border -->
-            <div class="w-full h-0.5 bg-[#88939620]"></div>
-            <div class="flex items-center justify-between">
-              <h1 class="text-base font-medium">Total:</h1>
-              <h3 class="text-base font-medium">
-                <span class="text-xs">৳</span>1000
+              Fruit Tree
+            </button>
+            <button class="text-base font-semibold">
+              <span class="text-xs">৳</span>500
+            </button>
+          </div>
+          <button
+            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
+          <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
+          <h3 class="font-semibold">Mango Tree</h3>
+          <p class="text-xs text-gray-600">
+            A fast-growing tropical tree that produces delicious mangoes.
+          </p>
+
+          <div class="flex justify-between">
+            <button
+              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
+            >
+              Fruit Tree
+            </button>
+            <button class="text-base font-semibold">
+              <span class="text-xs">৳</span>500
+            </button>
+          </div>
+          <button
+            class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </main>
+
+      <!-- Right Sidebar (Cart) -->
+      <aside class="bg-white p-4 rounded-lg mt-10 lg:mt-20">
+        <div class="flex flex-col gap-3">
+          <h1 class="text-base font-bold">Your Cart</h1>
+          <div
+            class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
+          >
+            <div class="flex flex-col gap-1">
+              <h2 class="text-sm font-medium">Mango Tree</h2>
+              <h3 class="text-base text-[#889396]">
+                <span class="text-xs">৳</span>500
+                <span
+                  ><i
+                    class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
+                  ></i
+                ></span>
+                <span>1</span>
               </h3>
+            </div>
+            <div>
+              <button
+                class="transition transform active:scale-95 cursor-pointer"
+              >
+                <i
+                  class="fa-solid fa-xmark text-[#889396] flex justify-center"
+                ></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <div class="w-full h-0.5 bg-[#1F293715]"></div>
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-semibold">Total:</h3>
+              <span class="text-base font-semibold">
+                <span class="text-xs">৳</span>1000
+              </span>
             </div>
           </div>
         </div>
-      </div>
+      </aside>
     </section>
 
     <!-- about the campaign -->
@@ -194,8 +287,8 @@
           <div>
             <img src="assets/about.png" alt="" class="w-screen" />
           </div>
-          <div class="flex flex-col justify-center">
-            <p class="text-xs mb-5">
+          <div class="flex flex-col justify-center mb-10">
+            <p class="text-xs mb-5 lg:mb-0">
               Green Earth is a global tree plantation initiative dedicated to
               fighting climate change. Since our start, we’ve planted over
               500,000 trees worldwide. By joining our campaign, you help restore
@@ -219,7 +312,7 @@
         <h1 class="text-2xl font-semibold">Our Impact</h1>
       </div>
       <div
-        class="flex flex-col lg:flex-row items-center justify-between w-full gap-5 lg:mb-20"
+        class="flex flex-col lg:flex-row items-center justify-between w-full gap-5 mb-10 lg:mb-20"
       >
         <div
           class="px-15 py-5 lg:px-25 lg:py-10 bg-white rounded-lg flex flex-col items-center w-full"
@@ -241,5 +334,84 @@
         </div>
       </div>
     </section>
+
+    <!-- plant a tree today input section -->
+    <section
+      class="px-4 lg:px-15 mx-auto flex items-center flex-col gap-3 lg:gap-10 bg-[#166534]"
+    >
+      <div class="mt-10 lg:mt-20">
+        <h1 class="text-2xl font-semibold text-white">Plant a Tree Today</h1>
+      </div>
+
+      <!-- input section -->
+      <div class="flex flex-col gap-3 bg-[#15803D] p-4 lg:p-7 rounded-lg mb-20">
+        <input
+          type="text"
+          name=""
+          id=""
+          class="py-2 rounded-md px-3 bg-white placeholder:text-sm border-none outline-none"
+          placeholder="Your Name"
+        />
+        <input
+          type="email"
+          name=""
+          id=""
+          class="py-2 rounded-md px-3 bg-white placeholder:text-sm border-none outline-none"
+          placeholder="Your Email Address"
+        />
+
+        <!-- Parent with submenu -->
+        <div class="w-full lg:w-100 bg-gray-100 rounded-md relative">
+          <details class="group">
+            <summary
+              class="flex cursor-pointer items-center justify-between px-3 py-2.5 rounded-md hover:bg-gray-200 transition text-sm"
+            >
+              Number of Trees
+              <span class="transition-transform group-open:rotate-90">
+                <i class="fa-solid fa-angle-right"></i>
+              </span>
+            </summary>
+
+            <!-- child submenu -->
+            <ul
+              class="absolute left-0 mt-1 w-full bg-white shadow-md rounded-md hidden group-open:block z-10"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
+                >
+                  Submenu 1
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
+                >
+                  Submenu 2
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
+                >
+                  Submenu 3
+                </a>
+              </li>
+            </ul>
+          </details>
+        </div>
+
+        <button
+          class="bg-[#FACC15] text-[#15803D] rounded-3xl px-2 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer"
+        >
+          Donate Now
+        </button>
+      </div>
+    </section>
+
+    <script src="main.js"></script>
   </body>
 </html>
