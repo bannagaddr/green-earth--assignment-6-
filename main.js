@@ -84,7 +84,7 @@ const displayAllPlants = (passAllPlantsData) => {
 
           <div class="flex justify-between">
             <button
-              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
+              class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs"
             >
               ${loopingAllPlantsData.category}
             </button>
