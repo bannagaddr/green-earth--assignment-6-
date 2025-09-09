@@ -31,27 +31,25 @@
       class="flex items-center justify-between px-4 lg:px-15 h-15 lg:h-20 mx-auto bg-[#15803D]"
     >
       <div class="flex items-center">
-        <!-- navbar dropdown button and subitem -->
-        <div class="flex items-center lg:hidden">
-          <div class="relative">
-            <!-- Icon button -->
-            <button
-              id="navMenuBtn"
-              class="text-white transition transform active:scale-95 cursor-pointer"
+        <!-- navbar dropdown button and subitem container-->
+        <div class="rounded-md relative lg:hidden">
+          <details class="group">
+            <summary
+              class="inline-flex cursor-pointer items-center justify-between rounded-md transition text-sm"
             >
-              <!-- Menu Icon -->
-              <i class="fa-solid fa-bars text-base lg:text-lg"></i>
-            </button>
+              <span class="transition transform active:scale-95 cursor-pointer">
+                <i class="fa-solid fa-bars text-base text-white"></i>
+              </span>
+            </summary>
 
-            <!-- Dropdown Menu -->
+            <!-- child submenu container-->
             <ul
-              id="navMenuDropdown"
-              class="hidden absolute left-0 mt-5 w-30 bg-white rounded-lg shadow-lg"
+              class="absolute left-0 w-35 mt-1 bg-white shadow-md rounded-md hidden group-open:block z-10"
             >
               <li>
                 <a
                   href="#"
-                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
                 >
                   About
                 </a>
@@ -59,7 +57,7 @@
               <li>
                 <a
                   href="#"
-                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
                 >
                   Gallery
                 </a>
@@ -67,13 +65,13 @@
               <li>
                 <a
                   href="#"
-                  class="block px-3 py-2 rounded-md hover:bg-gray-100 transition"
+                  class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
                 >
                   Plant a Tree
                 </a>
               </li>
             </ul>
-          </div>
+          </details>
         </div>
 
         <!-- menu bar logo and title-->
@@ -149,164 +147,79 @@
       </div>
 
       <!-- left categories menu, center card, right your cart section container-->
-      <div class="px-4 lg:px-10 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <div class="px-4 lg:px-10 mx-auto grid grid-cols-1 lg:grid-cols-6 gap-3">
         <!-- Left Sidebar -->
         <aside class="rounded-lg mt-10">
           <h2 class="font-bold">Categories</h2>
-          <!-- categories items container-->
-          <div class="mt-2">
-            <!-- categories items -->
-            <p
-              class="text-base hover:bg-[#15803D] px-3 py-1 rounded-md hover:text-white transition transform active:scale-95 cursor-pointer"
-            >
-              All Trees
-            </p>
+          <!-- categories items container //data showing from api-->
+          <div id="categoriesDataContainer" class="mt-2">
+            <!-- categories items showing from api-->
           </div>
         </aside>
 
         <!-- Middle Cards (auto expand to 2 columns space) -->
         <main
-          class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10"
+          id="plantsDataContainer"
+          class="lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-10"
         >
-          <!-- card items -->
-          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-            <h3 class="font-semibold">Mango Tree</h3>
-            <p class="text-xs text-gray-600">
-              A fast-growing tropical tree that produces delicious mangoes.
-            </p>
-
-            <div class="flex justify-between">
-              <button
-                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
-              >
-                Fruit Tree
-              </button>
-              <button class="text-base font-semibold">
-                <span class="text-xs">৳</span>500
-              </button>
-            </div>
-            <button
-              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-            >
-              Add to Cart
-            </button>
-          </div>
-
-          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-            <h3 class="font-semibold">Mango Tree</h3>
-            <p class="text-xs text-gray-600">
-              A fast-growing tropical tree that produces delicious mangoes.
-            </p>
-
-            <div class="flex justify-between">
-              <button
-                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
-              >
-                Fruit Tree
-              </button>
-              <button class="text-base font-semibold">
-                <span class="text-xs">৳</span>500
-              </button>
-            </div>
-            <button
-              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-            >
-              Add to Cart
-            </button>
-          </div>
-
-          <div class="bg-white p-3 rounded-md shadow flex flex-col gap-3">
-            <img src="assets/half-moon.jpg" alt="" class="rounded-md mb-2" />
-            <h3 class="font-semibold">Mango Tree</h3>
-            <p class="text-xs text-gray-600">
-              A fast-growing tropical tree that produces delicious mangoes.
-            </p>
-
-            <div class="flex justify-between">
-              <button
-                class="bg-[#DCFCE7] text-[#15803D] rounded-3xl px-2 py-1 lg:px-3 lg:py-1 text-xs lg:text-xs transition transform active:scale-95 cursor-pointer"
-              >
-                Fruit Tree
-              </button>
-              <button class="text-base font-semibold">
-                <span class="text-xs">৳</span>500
-              </button>
-            </div>
-            <button
-              class="bg-[#15803D] text-[white] rounded-3xl lg:py-1 py-2 lg:px-4 text-xs lg:text-base transition transform active:scale-95 cursor-pointer w-full"
-            >
-              Add to Cart
-            </button>
-          </div>
+          <!-- card items showing from api-->
         </main>
+
+        <!-- Modal -->
+        <!--modal for plants name Open the modal using ID.showModal() method -->
+        <dialog id="plantClickedShowingModal" class="modal">
+          <div class="modal-box">
+            <h3 id="modalName" class="text-lg font-bold"></h3>
+            <img
+              id="modalImage"
+              class="w-full h-60 object-cover rounded-md my-3"
+            />
+            <div class="flex flex-col gap-1">
+              <div>
+                <span class="text-sm font-bold">Category:</span>
+                <span id="modalCategory" class="text-sm"></span>
+              </div>
+              <div>
+                <span class="text-sm font-bold">Price:</span>
+                <span class="text-xs">
+                  ৳<span id="modalPrice" class="text-sm"></span>
+                </span>
+              </div>
+              <div>
+                <span class="text-sm font-bold">Description:</span>
+                <span id="modalDescription" class="text-sm text-left"></span>
+              </div>
+            </div>
+
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- DaisyUI auto close -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
 
         <!-- Right Sidebar (Cart) -->
         <aside class="bg-white p-4 rounded-lg mt-10">
           <div class="flex flex-col gap-3">
             <h1 class="text-base font-bold">Your Cart</h1>
             <!-- cart items -->
-            <!-- item-1 -->
-            <div
-              class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
-            >
-              <div class="flex flex-col gap-1">
-                <h2 class="text-sm font-medium">Mango Tree</h2>
-                <h3 class="text-base text-[#889396]">
-                  <span class="text-xs">৳</span>500
-                  <span
-                    ><i
-                      class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
-                    ></i
-                  ></span>
-                  <span>1</span>
-                </h3>
-              </div>
-              <div>
-                <button
-                  class="transition transform active:scale-95 cursor-pointer"
-                >
-                  <i
-                    class="fa-solid fa-xmark text-[#889396] flex justify-center"
-                  ></i>
-                </button>
-              </div>
-            </div>
-            <!-- item-2 -->
-            <div
-              class="bg-[#F0FDF4] flex items-center justify-between rounded-lg px-3 py-2"
-            >
-              <div class="flex flex-col gap-1">
-                <h2 class="text-sm font-medium">Mango Tree</h2>
-                <h3 class="text-base text-[#889396]">
-                  <span class="text-xs">৳</span>500
-                  <span
-                    ><i
-                      class="fa-solid fa-xmark text-[#889396] flex justify-center text-xs"
-                    ></i
-                  ></span>
-                  <span>1</span>
-                </h3>
-              </div>
-              <div>
-                <button
-                  class="transition transform active:scale-95 cursor-pointer"
-                >
-                  <i
-                    class="fa-solid fa-xmark text-[#889396] flex justify-center"
-                  ></i>
-                </button>
-              </div>
-            </div>
+            <!-- cart items showing card items plants name and price -->
+            <div id="yourCartContainer" class="flex flex-col gap-2"></div>
 
             <!-- calculation result section -->
-            <div class="flex flex-col gap-2">
-              <div class="w-full h-0.5 bg-[#1F293715]"></div>
+            <div id="totalSectionShowHide" class="flex flex-col gap-2 hidden">
+              <div class="w-full h-0.5 bg-[#1F293715] mb-2"></div>
               <div class="flex items-center justify-between">
                 <h3 class="text-base font-semibold">Total:</h3>
                 <span class="text-base font-semibold">
-                  <span class="text-xs">৳</span>1000
+                  <p class="text-xs">
+                    ৳<span
+                      id="totalPlantPriceShowing"
+                      class="text-base font-semibold"
+                    ></span>
+                  </p>
                 </span>
               </div>
             </div>

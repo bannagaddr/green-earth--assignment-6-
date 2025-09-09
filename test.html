@@ -24,22 +24,23 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="w-full lg:w-100 bg-gray-100 rounded-md relative">
+    <!-- ========================================= -->
+    <div class="rounded-md relative">
       <details class="group">
         <summary
-          class="flex cursor-pointer items-center justify-between px-3 py-2.5 rounded-md hover:bg-gray-200 transition text-sm"
+          class="inline-flex cursor-pointer items-center rounded-md transition text-sm"
         >
-          Number of Trees
-          <span class="transition-transform group-open:rotate-90">
-            <i class="fa-solid fa-angle-right"></i>
+          <span class="transition transform active:scale-95 cursor-pointer">
+            <i class="fa-solid fa-bars text-base lg:text-lg"></i>
           </span>
         </summary>
 
-        <!-- child submenu -->
+        <!-- child submenu container-->
         <ul
-          class="absolute left-0 mt-1 w-full bg-white shadow-md rounded-md hidden group-open:block z-10"
+          class="absolute left-0 mt-1 bg-white shadow-md rounded-md z-10 hidden group-[&[open]]:block"
         >
           <li>
             <a
@@ -57,8 +58,65 @@
               Submenu 2
             </a>
           </li>
+          <li>
+            <a
+              href="#"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm"
+            >
+              Submenu 3
+            </a>
+          </li>
         </ul>
       </details>
     </div>
+
+    <!-- =================================== -->
+    <!-- navbar dropdown button and subitem container-->
+    <div class="rounded-md relative">
+      <details class="group">
+        <summary
+          class="inline-flex cursor-pointer items-center justify-between rounded-md transition text-sm"
+        >
+          <span class="transition transform active:scale-95 cursor-pointer">
+            <i
+              id="navMenuBtn"
+              class="fa-solid fa-bars text-base text-white"
+            ></i>
+          </span>
+        </summary>
+
+        <!-- child submenu container-->
+        <ul
+          class="absolute left-0 w-35 mt-1 bg-white shadow-md rounded-md hidden group-open:block z-10"
+        >
+          <li>
+            <a
+              href="#"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm submenu"
+            >
+              subitem1
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm submenu"
+            >
+              subitem2
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block px-3 py-2 rounded-md hover:bg-gray-200 text-sm submenu"
+            >
+              subitem3
+            </a>
+          </li>
+        </ul>
+      </details>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
